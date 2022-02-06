@@ -17,7 +17,7 @@ exports.regUser = (req, res) => {
     //     db.query(sql, { username: userinfo.username, password: userinfo.password }, (err, results) => {
     //         if (err) return res.cc(err.message)
     //         if (results.affectedRows != 1) return res.cc('注册用户失败，请稍后再试')
-    //         res.cc('注册成功', 0)
+            // res.cc('注册成功', 0)
     //     })
     // })
 }
