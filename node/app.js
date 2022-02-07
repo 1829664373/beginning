@@ -25,6 +25,6 @@ app.use((err, req, res, next) => {
     if (err.name === 'UnauthorizedError') return res.cc('身份认证失败')
     res.cc(err)
 })
-app.listen(8080, function () {
-    console.log('8080');
+app.listen(8000, function () {
+    console.log('8000');
 })

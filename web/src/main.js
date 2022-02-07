@@ -5,8 +5,10 @@ import store from './store'
 import Axios from 'axios'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import './css/commonality.css'
 
 Vue.config.productionTip = false
+
 Vue.prototype.$http = Axios
 Vue.use(ElementUI);
 
