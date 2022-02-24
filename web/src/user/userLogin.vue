@@ -91,15 +91,15 @@ export default {
         if (valid) {
           console.log(Qs.stringify(this.ruleForm));
           const data = await this.$http.post(
-            "http://localhost:8000/api/login",
+            "/api/login",
             Qs.stringify(this.ruleForm)
-          );
-          if (data.status == 200 && data.data.status == 0) {
-            this.$message.success(data.data.message);
-            this.$router.push({ path: "/" });
-          }
-          //保存tooken
+          )
+            if (data.status == 200 && data.data.status == 0) {
+              this.$message.success(data.data.message);
           window.sessionStorage.setItem("token", data.data.token);
+              this.$router.push({ path: "/" });
+            }
+          //保存tooken
         } else {
             this.$message.error("错误，登录失败")
           return false;

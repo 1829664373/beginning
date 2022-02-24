@@ -93,7 +93,7 @@ export default {
         if (valid) {
           console.log(Qs.stringify(this.ruleForm));
           const data = await this.$http.post(
-            "http://localhost:8000/api/reguser",
+            "/api/reguser",
             Qs.stringify(this.ruleForm)
           );
           if (data.status == 200 && data.data.status == 0) {

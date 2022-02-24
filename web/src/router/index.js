@@ -15,22 +15,14 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../user/userLogin.vue')
+    component: () => import(/* webpackChunkName: "userLogin" */ '../user/userLogin.vue')
   },{//注册
     path: '/userReguser',
     name: 'userReguser',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../user/userReguser.vue')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "userReguser" */ '../user/userReguser.vue')
   }
 ]
 
@@ -42,7 +34,7 @@ router.beforeEach((to,from,next)=>{
   if(to.path==='/userReguser'|| to.path==='/userLogin')return next()
   const tokenStr = window.sessionStorage.getItem('token')
   if(!tokenStr)return next('/userLogin')
-  next()
+   next()
 })
 
 export default router

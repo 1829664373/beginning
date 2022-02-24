@@ -10,7 +10,7 @@ exports.inquire = (req, res) => {
     let addList = {}
     console.log(req.body);
     db.query(sql1, req.body.list_genera, (err, result) => {
-        console.log(req.body.list_genera);
+        // console.log(req.body);
         if (err) return res.cc(err.message)
     //     if (result.length < 0) return res.cc('未查找到数据')
         // db.query(sql2, result[0].id, (err, result2) => {
